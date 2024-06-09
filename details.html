@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ yayin.baslik }}</title>
+</head>
+<body>
+    <h1>{{ yayin.baslik }}</h1>
+    <ul>
+        <li><strong>Yazarlar:</strong> {{ ', '.join(yayin.yazarlar) }}</li>
+        <li><strong>Yayın Türü:</strong> {{ yayin.yayin_turu }}</li>
+        <li><strong>Yayın Tarihi:</strong> {{ yayin.tarih }}</li>
+        <li><strong>Yayıncı Adı:</strong> {{ yayin.yayinci_adi }}</li>
+        <li><strong>Anahtar Kelimeler (Arama Motorunda):</strong> {{ ', '.join(yayin.arama_anahtar_kelimeleri) }}</li>
+        <li><strong>Anahtar Kelimeler (Makaleye Ait):</strong> {{ ', '.join(yayin.makale_anahtar_kelimeleri) }}</li>
+        <li><strong>Özet:</strong> {{ yayin.ozet }}</li>
+        <li><strong>Alıntı Sayısı:</strong> {{ yayin.alinti_sayisi }}</li>
+        <li><strong>DOI:</strong> {{ yayin.doi }}</li>
+        <li><strong>URL Adresi:</strong> <a href="{{ yayin.url_adresi }}">{{ yayin.url_adresi }}</a></li>
+    </ul>
+</body>
+</html>
